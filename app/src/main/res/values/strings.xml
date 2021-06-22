@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GitHubCli</string>
+    <string name="login_with_github_text">Login with Github</string>
+</resources>
