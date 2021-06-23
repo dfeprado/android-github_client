@@ -16,7 +16,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(layoutBinding.root)
 
         layoutBinding.btnLogIn.setOnClickListener {
-            GithubAuthDialog().show(supportFragmentManager, null)
+            GithubAuthDialog() { code ->
+                Log.i("GITHUB_LOGIN", "Your code is $code")
+            }.show(supportFragmentManager, null)
         }
 
 //        layoutBinding.webView.apply {
