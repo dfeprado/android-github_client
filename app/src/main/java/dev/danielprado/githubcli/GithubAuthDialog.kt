@@ -10,8 +10,9 @@ import androidx.fragment.app.DialogFragment
 import dev.danielprado.githubcli.databinding.DialogGithubAuthBinding
 import java.lang.IllegalStateException
 
-const val GH_URL_LOGIN = "https://github.com/login/oauth/authorize"
-const val GH_LOGIN_STATE = "MyGitHubApplication"
+const val GH_CLI_ID = "c3daa1d5d1d813ca449d"
+private const val GH_URL_LOGIN = "https://github.com/login/oauth/authorize"
+private const val GH_LOGIN_STATE = "MyGitHubApplication"
 
 typealias OnCodeObtained = (String) -> Unit
 
@@ -39,7 +40,7 @@ class GithubAuthDialog(val onCodeObtained: OnCodeObtained): DialogFragment() {
                         super.doUpdateVisitedHistory(view, url, isReload)
                     }
                 })
-                loadUrl("$GH_URL_LOGIN?client_id=c3daa1d5d1d813ca449d&state=$GH_LOGIN_STATE&allow_signup=false")
+                loadUrl("$GH_URL_LOGIN?client_id=$GH_CLI_ID&state=$GH_LOGIN_STATE&allow_signup=false")
             }
 
             dialog
