@@ -1,4 +1,5 @@
 *.iml
+app/src/main/java/dev/danielprado/githubcli/GitHub.kt
 .gradle
 /local.properties
 /.idea/caches
